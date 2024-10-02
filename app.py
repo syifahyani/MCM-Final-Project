@@ -22,7 +22,7 @@ df = pd.merge(full_df, df, on=['State', 'Crime Category', 'Year'], how='left').f
 
 crime_type_data = df.groupby('Crime Type')['Reported Crimes'].sum().reset_index()
 
-geojson_url = "https://raw.githubusercontent.com/KhalidBatran/MCM-project-2/refs/heads/main/assets/malaysia_state.geojson"
+geojson_url = "https://raw.githubusercontent.com/syifahyani/MCM-Final-Project/refs/heads/main/assets/malaysia_state.geojson"
 states_json = requests.get(geojson_url).json()
 
 def create_map(selected_state=None):
